@@ -1,0 +1,195 @@
+.button {
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  min-width: 359px;
+  min-height: 65px;
+  border-radius: 5px;
+  background-image: linear-gradient(to top, #559127 0%, #6fb639 100%);
+  padding: 21px 0;
+
+  span {
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    font-family: 'GothamPro';
+    z-index: 2;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/button-before.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to top, #407816 0%, #5da923 100%);
+    text-decoration: none;
+    color: #fff;
+  }
+
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+.action {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 426px;
+    height: 153px;
+    background-image: url(../img/button-after.png);
+    background-repeat: no-repeat;
+    left: -41px;
+    top: -18px;
+    z-index: 0;
+  }
+}
+
+.section-action {
+  width: 360px;
+  &::after {
+    display: none;
+  }
+
+  &:hover {
+    &::after {
+      display: block;
+    }
+
+    .button-light {
+      border-radius: 5px;
+      background-image: linear-gradient(to top, #559127 0%, #6fb639 100%);
+
+      span {
+        color: #fff;
+      }
+    }
+    .button-inverse{
+      border-radius: 5px;
+      background-image: linear-gradient(to top, #306c82 0%, #4d92ac 100%); 
+      
+      span {
+        color: #fff;
+      }
+    }
+  }
+
+  .button-light {
+    min-width: 360px;
+    height: 58px;
+    border-radius: 5px;
+    border: 1px solid #6fb639;
+    background-color: inherit;
+    background-image: none;
+    color: #6fb639;
+    min-height: 58px;
+
+    span {
+      position: relative;
+      color: #6fb639;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.7px;
+      font-family: 'GothamPro';
+      z-index: 2;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url(../img/button-before.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+.card-action{
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 351px;
+    height: 121px;
+    background-image: url(../img/button-inverse-after.png);
+    background-repeat: no-repeat;
+    left: -21px;
+    top: -10px;
+    z-index: 0;
+  }
+}
+
+
+.button-inverse{
+  min-width: 280px;
+    height: 58px;
+    border-radius: 5px;
+    border: 1px solid #306c82;
+    background-color: inherit;
+    background-image: none;
+    padding: 19px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+span {
+  position: relative;
+  color: #306c82;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  font-family: 'UniNeueBook';
+  z-index: 2;
+}
+
+&::before {
+  position: absolute;
+  content: "";
+  background-image: url(../img/button-before.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+&:hover{
+  border-radius: 5px;
+  background-image: linear-gradient(to top, #306c82 0%, #4d92ac 100%);
+}
+
+}

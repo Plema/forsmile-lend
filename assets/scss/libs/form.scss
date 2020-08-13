@@ -1,0 +1,472 @@
+//Общие стили для форм
+
+.section-form,
+.modall-body {
+    padding-top: 73px;
+
+    .heading {
+
+        h2 {
+            font-size: 35px;
+            text-align: left;
+            word-wrap: break-word;
+            font-family: 'UniNeueBook';
+            overflow-wrap: break-word;
+        }
+
+        span {
+            font-size: 24px;
+            font-weight: 400;
+            font-family: 'UniNeueRegular';
+            display: block;
+            margin-top: 1.4em;
+            margin-bottom: 0.5em;
+            text-align: left;
+            line-height: 27px;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 28px;
+            max-width: 717px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .text-bold {
+            color: #292929;
+            font-family: 'UniNeueBold';
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+    }
+
+    .form {
+        max-width: 1070px;
+        margin: 0 auto;
+
+        input {
+            height: 56px;
+            border-radius: 5px;
+            border: 1px solid #939393;
+            max-width: 308px;
+            background-color: inherit;
+
+            &::placeholder {
+                color: #b7b7b7;
+                font-family: 'UniNeueBook';
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            &:active,
+            &:focus {
+                color: #306c82;
+                border: 1px solid #306c82;
+
+                &::placeholder {
+                    color: #306c82;
+                }
+            }
+
+            &:active+i,
+            &:focus+i {
+                color: #306c82;
+            }
+        }
+
+        textarea {
+            overflow: auto;
+            resize: none;
+            max-width: 682px;
+            width: 100%;
+            height: 184px;
+            border-radius: 5px;
+            border: 1px solid #939393;
+            background-color: inherit;
+            padding: 17px 10px;
+
+            &::placeholder {
+                color: #b7b7b7;
+                font-family: 'UniNeueBook';
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            &:active,
+            &:focus {
+                color: #306c82;
+                border: 1px solid #306c82;
+
+                &::placeholder {
+                    color: #306c82;
+                }
+            }
+        }
+
+        .button {
+            width: 290px;
+            height: 58px;
+            min-width: 264px;
+            min-height: 58px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #6fb639;
+            background-color: inherit;
+            background-image: none;
+            color: #6fb639;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.7px;
+            font-family: 'GothamPro';
+            z-index: 2;
+            display: block;
+            margin-bottom: 15px;
+            margin-top: 11px;
+        }
+
+        .form-group {
+            max-width: 290px;
+        }
+
+        .form-column {
+            position: relative;
+            max-width: 290px;
+            margin-bottom: 20px;
+
+            i {
+                position: absolute;
+                right: 11px;
+                top: 15px;
+                font-size: 16px;
+                color: #939393;
+            }
+        }
+
+        .form-action {
+            position: relative;
+            height: 76px;
+            display: block;
+            width: 345px;
+        }
+    }
+}
+
+.form-control {
+    padding: .375rem 2rem .375rem .75rem;
+
+    &:focus {
+        color: #306c82;
+        background-color: inherit;
+        border-color: #306c82;
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
+.checkbox {
+    vertical-align: top;
+    width: 17px;
+    height: 17px;
+    margin: 0;
+}
+
+.checkbox+label {
+    cursor: pointer;
+}
+
+.checkbox input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 0;
+}
+
+.checkbox__text {
+    position: relative;
+    display: block;
+    padding-left: 33px;
+    padding-top: 10px;
+    cursor: pointer;
+    color: #b7b7b7;
+    font-size: 14px;
+    font-weight: 400;
+    width: 349px;
+    font-family: 'UniNeueBook';
+    line-height: 18px;
+
+    a {
+        font-size: 14px;
+        font-weight: 400;
+        font-family: 'UniNeueBook';
+        line-height: 18px;
+        color: #306c82;
+        text-decoration: underline;
+    }
+}
+
+.checkbox__text:before {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 0;
+    border-radius: 13px;
+    width: 15px;
+    height: 15px;
+    box-shadow: 0 4px 10px rgba(48, 108, 130, 0.2);
+    border: 4px solid #ffffff;
+}
+
+.checkbox__text:after {
+    content: '';
+    position: absolute;
+    top: 17px;
+    left: 0;
+    border-radius: 10px;
+    width: 7px;
+    height: 7px;
+    background-color: #306c82;
+    opacity: 0;
+}
+
+.checkbox input:checked+.checkbox__text:after {
+    left: 4px;
+    opacity: 1;
+}
+
+.checkbox input:checked+.checkbox__text:before {
+    border-radius: 50px;
+}
+
+
+.checkbox__text {
+    width: 298px;
+    ;
+}
+
+@media screen and (min-width: 480px) {
+    .section-form {
+        .heading {
+            margin-bottom: 50px;
+
+            h2 {
+                font-size: 36px;
+                text-align: center;
+            }
+
+            p,
+            span {
+                text-align: center;
+            }
+        }
+
+        .form {
+            .form-column {
+                margin: 0 auto;
+                margin-bottom: 20px;
+                min-width: 303px;
+            }
+
+            .form-group {
+                margin: 0 auto;
+                margin-bottom: 20px;
+                min-width: 303px;
+            }
+
+            .button {
+                margin: 0 auto;
+            }
+
+            .form-action {
+                margin: 0 auto;
+                margin-bottom: 15px;
+                margin-top: 11px;
+            }
+        }
+    }
+
+    .checkbox__text {
+        width: 318px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-form .heading {
+        span {
+            margin-top: 1em;
+        }
+
+        .text-bold {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .checkbox__text {
+        width: 313px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .section-form .form {
+        .form-column {
+            margin: 0;
+        }
+
+        .button {
+            margin-left: 8px;
+            width: 264px;
+        }
+
+        .checkbox__text {
+            width: 343px;
+        }
+
+        .form-action {
+            margin-left: 8px;
+        }
+    }
+}
+
+
+// конец 
+
+
+//Стили для формы страницы услуги list-services.html( .form-services )
+
+.form-services {
+    background-color: #f4f4f4;
+    padding-top: 45px;
+    padding-bottom: 41px;
+}
+
+@media screen and (min-width: 768px) {
+    .form-services {
+        padding-top: 79px;
+        padding-bottom: 36px;
+    }
+}
+
+//Конец
+
+
+//Стили для формы страницы Главная index.html( .form-left )
+
+.text-bold {
+    color: #292929;
+    font-family: 'UniNeueBold';
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 auto;
+    margin-bottom: 21px;
+    display: block;
+    max-width: 286px;
+}
+
+.form-left {
+    .form-column {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .form {
+        .button {
+            margin: 0 auto;
+            margin-bottom: 15px;
+            margin-top: 11px;
+        }
+
+        .form-action {
+            width: 282px;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+@media screen and (min-width: 480px) {
+    .form-left {
+        .text-bold {
+            max-width: 385px;
+        }
+
+        .heading {
+            margin-bottom: 0;
+        }
+
+        padding-top: 77px;
+
+        .text-bold {
+            margin-bottom: 21px;
+        }
+
+        .form {
+            input {
+                max-width: 388px;
+            }
+
+            .button {
+                width: 388px;
+                margin-top: 7px;
+                height: 62px;
+            }
+
+            .form-column {
+                max-width: 388px;
+                margin-bottom: 20px;
+            }
+
+            .form-action {
+                height: 76px;
+                width: 388px;
+                margin-top: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .form-left {
+        .heading {
+            margin-bottom: 55px;
+        }
+
+        .form .button {
+            width: 330px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .form-left {
+        .heading span {
+            margin-top: 0.8em;
+        }
+
+        .form {
+            padding-left: 68px;
+            padding-top: 15px;
+
+            .button {
+                margin-left: 0;
+                width: 381px;
+            }
+
+            .form-action {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1360px) {
+    .form-left .form .button {
+        margin-left: 0;
+        width: 388px;
+    }
+}
+
+//Конец
